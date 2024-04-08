@@ -20,11 +20,11 @@ We first generate an appropriate virtual environment using conda:
 
 Next, set the DKPro environment via:
 
-    export "DKPRO_HOME=/home/jilee/Desktop/ARR/GrKMathe/grk-feature-extraction/resources/DKPro"
+    export "DKPRO_HOME=<path-to-project>/resources/DKPro"
 
 In addition, we need to explicitly set the path to the treetagger library:
 
-    export "TREETAGGER_HOME=/home/jilee/Desktop/ARR/GrKMathe/grk-feature-extraction/resources/DKPro/treetagger/lib"
+    export "TREETAGGER_HOME=<path-to-project>/resources/DKPro/treetagger/lib"
 
 Finally, you can run the full feature extraction pipeline via:
 
