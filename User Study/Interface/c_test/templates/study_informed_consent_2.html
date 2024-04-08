@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>Data Privacy and Informed Consent</h2>
+
+<p>
+Data processing in the context of this study is performed according to the privacy regulations of the General Data Protection Regulation (GDPR) and the Privacy and Freedom of Information law of the State of Hessen (HDSIG). 
+All data will only be used for the purposes described here.
+In the context of this study, the following information will be collected:</p>
+
+
+<p>
+<b>Non-personal data</b>
+ <div class="tweet">
+    <ul>
+    <li>An encrypted study key of your choice to re-identify yourself during/after the study.</li>
+    <li>Your responses for each gap.</li>
+    <li>Your completion time for each C-Test.</li>
+    <li>Your perceived difficulty after each C-Test.</li>
+    </ul> 
+ </div>
+    Additionally, we ask you to provide following information in a questionnaire:
+ <div class="tweet">
+    <ul>
+    <li>Your English proficiency level (CEFR)</li>
+    <li>The time you have been actively using or studied English.</li>
+    <li>Your language learning experience for English.</li>
+    <li>Your native (first) language.</li>
+    <li>Your language learning experience for other languages.</li>
+    </ul> 
+ </div>
+</p>
+
+<p>
+<b>Personal data</b>
+    <div class="tweet">
+    We do not collect any personal data and no personal data is required to participate in this study.
+    </div>
+</p>
+
+<h3>Confidentiality</h3>
+<p>
+All data collected in course of the study are naturally confidential and will only be used in anonymized form. Demographic data like your first language or English proficiency do not allow deducing unambiguous information about your person. You will be asked at no point of the study to disclose your name or other unambiguous information about yourself.
+</p>
+<p>
+<b>Data storage</b>
+    <div class="tweet">
+Collected data will be stored in <a target="_blank" href="">Anonymous</a> conforming to the <a target="_blank" href="">anonymous university guidelines for research data management</a>. Data storage takes place in a form which does not allow conclusions about your person, meaning that all data will be anonymized or pseudonymized.
+    </div>
+</p>
+
+<p>
+<b>Third parties to whom personal data is disclosed</b>
+    <div class="tweet">
+    An anonymized or pseudonymized (your ID will be replaced with a randomly generated key) version of your answers and completion time will be made publicly availabe in an open access conference under a CC-by license.
+    </div>
+</p>
+
+<p>
+<b>Third parties to whom personal data is disclosed</b>
+    <div class="tweet">
+Your participation in this study is voluntary. You can withdraw from participation at any point of time or withdraw your consent without facing any disadvantages (withdrawal). If you withdraw from participation, no data connected to your person will be stored and already collected data will be deleted.
+    </div>
+</p>
+
+<p>
+<b>How to access, rectify and delete the non-personal data </b>
+    <div class="tweet">
+    Please send a mail with the key you used for participating at this study to the contact person below along with the purpose (access, rectify, delete). There is no need to provide any reason for us to take action. Please understand that the study key is required for us to identify your provided data.
+    </div>
+</p>
+
+<p>
+<b>Data controller and contact person</b>
+    <div class="tweet">
+    Anonymous </br>
+    Anonymous Author </br>
+    author@anonymous.ano
+    </div>
+</p>
+
+
+<b>Declaration of Consent</b>
+
+<form action="/agree" method="GET">
+  <div>
+    <input type="checkbox" id="consent1" name="consent1" required/>
+    <label for="consent1">I have read the explanations regarding the study und I hereby agree to participate in the above-named study.</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="consent2" name="consent2" required/>
+    <label for="consent2">I agree that any data which is collected in the course of the study will be analyzed for scientific purposes and will be stored in anonymized and pseudonymized form. I am aware that my participation is voluntary and that I can withdraw from participation at any time and without giving reasons. </label>
+  </div>
+    <p><input class="button" type="submit" value="Understood. Take me to the study!"></p>
+</form>
+
+
+<p><a class="button" href="/disagree">I don't agree to the usage of my data (don't participate).</a></p> 
+
+{% endblock %}
+

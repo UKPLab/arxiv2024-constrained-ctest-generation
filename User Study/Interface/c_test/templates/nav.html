@@ -1,0 +1,13 @@
+    <nav>
+      <a href="/">Home</a> &#124; 
+{% if session['logged_in'] %}
+      <a href="/logout">Pause Study</a> &#124; 
+{% else %}
+      <a href="/study">Login</a> &#124; 
+      <a href="/register">Register</a> &#124; 
+{% endif %}
+      <a href="/study_task_description" target="_blank" rel="noopener noreferrer">Study Description</a> &#124; 
+      <a href="/study_cefr_description" target="_blank" rel="noopener noreferrer">What is the CEFR proficiency?</a> &#124; 
+      <!-- <a href="/registrate"> Register </a> &#124; -->
+      <!-- <a href="/annotation_task_description">Instructions</a> &#124; -->
+    </nav>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h4>Your exercise history: </h4>
+
+<table>
+<tr>
+	<th>Date</th>
+	<th>Score</th>
+        <th>Finished in</th>
+	<th>Personal Assessment</th>
+</tr>
+  {% for ctest_key, ctest_value in data.statistics.items() %}
+    <tr>
+	<td><a href={{ url_for('show_single_result', ctest_taken_id=ctest_key) }}>{{ ctest_value.ctest_taken_date }}</a></td>
+	<td>{{ ctest_value.score }}</td>
+        <td>{{ ctest_value.time_taken }}</td>
+	<td>{{ ctest_value.user_feedback }}</td>
+    </tr>
+  {% endfor %}
+
+</table>
+<p><a class="button" href="/study">Back</a></p> 
+{% endblock %}
+

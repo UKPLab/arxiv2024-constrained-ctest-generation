@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	{% if session['logged_in'] %}
+	<p>
+	Thank you for participating in this study! Please feel free to continue your exercises whenever you feel ready!
+	</p>
+	<p><a class="button" href="/study">Start the Exercises</a></p>
+	{% else %}
+	<p><a class="button" href="/register">Enter Study</a> 
+	{% endif %}
+
+<p><strong>Data privacy:</strong> You can participate fully anonymously by picking an arbitrary participant key. Neither your e-mail address nor personal data are required to sign up. Besides your encrypted participant key, all we store are your annotations and statistical information such as your language proficiency and time spent on each C-Test. We do not attempt to determine your identity. We will not sell your data. We simply aim to use some of your input for research purposes to improve the generation of language learning exercises. We may publish your answers together with our research results, but always fully anonymized. You will be explicitly asked for your informed consent when participating at the study.</p>
+
+{% endblock %}
+

@@ -1,0 +1,642 @@
+body {
+	background-image:: url("hello.jpg");
+    background-repeat: no-repeat;   /*no-repeat*/
+}
+.page {	
+    background: url("hello.jpg");
+    background-repeat: no-repeat;   /*no-repeat*/
+	margin: 30px auto 10px;
+	max-width: 700px;
+    background-color: rgba(255,255,255,0.9);
+    background-blend-mode: lighten;
+    padding: 10px;
+}
+
+ul{
+margin-bottom: 5px;
+margin-top: 0px;
+}
+
+#hidden_div {
+    display: none;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+nav {
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: Helvetica, Verdana, sans-serif;
+  margin: 0px;
+}
+
+nav {
+    background-color: #ddd;
+}
+
+img {
+    padding: 10px;
+    width: 200px;
+}
+
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+fieldset {
+  border: none;
+  margin: 0px 0px 20px;
+  padding: 0px;
+}
+.flash {
+  background: #cee5F5;
+  padding: 0.5em;
+  border: 1px solid #aacbe2;
+  margin: 10px 0px;
+}
+
+header {
+  background: #c7d5ea;
+	padding: 20px 5px;	
+	margin: 0px;
+}
+header h1 {
+	color: #111;
+	text-align: center;
+	font-size: 36px;
+}
+header h2 {
+	color: #111;
+	text-align: center;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+nav {
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	padding: 1px 5px 3px;
+	margin: 5px 0px 20px;
+	color: #999;
+	text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+textarea
+{
+  width:100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.contact td, tr{
+    border: none;
+    background-color: white;
+}
+
+h3 {
+  font-size: 24px;
+  padding: 0px 0px 10px;
+}
+p {
+  font-size: 16px;
+  padding: 0px 0px 10px;
+}
+.fields {
+  margin: 0px 0px 10px;
+  padding: 0px 7px;
+}
+.fields input{
+  margin: 3px 0px;
+}
+
+.fields select {
+  position: relative;
+  display: inline-block;
+  border: none;
+  background: #16a700;
+  border-radius: 7px;
+  color: white;
+  padding: 3px 8px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 2px 2px 3px grey;
+  margin: 0px 2px 2px 0px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.fields input[type="number"] {
+  width: 3em
+}
+
+.questionnaire {
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+.questionnaire .section {
+	margin: 5px 0px 20px;
+	border-bottom: 1px solid #bbb;
+}
+
+.command {
+  padding: 20px 10px;
+}
+
+
+.button,
+.command button,
+.command input[type="submit"] {
+  position: relative;
+  display: inline-block;
+  border: none;
+  background: #03f;
+  border-radius: 7px;
+  color: white;
+  padding: 3px 8px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 2px 2px 3px grey;
+  margin: 0px 2px 2px 0px;
+  cursor: pointer;
+}
+.button:hover,
+.command button:hover,
+.command input[type="submit"]:hover {
+  text-decoration: none;
+  background: blue;
+}
+.button:active,
+.command button:active,
+.command input[type="submit"]:active {
+  top: 2px;
+  left: 2px;
+  box-shadow: none;
+}
+
+.login .fields {
+  font-size: 18px;
+}
+
+.register {
+  margin: 10px 0px 20px;
+  padding: 0px 20px;
+}
+.register .or {
+  padding: 0px 20px;
+}
+.register .free {
+  font-weight: bold;
+  padding-left: 30px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.ctest {
+	border: 1px solid #666;
+	padding: 10px;
+	line-height: 200%;
+	margin: 0px 0px 20px;
+	font-family: monospace;
+	font-size: 16px;
+}
+
+.ctest input[type="text"][gap-size="1"] {
+    width: 1.5ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.5ch) 
+	#ccc 0 100%/60% 2px no-repeat;
+	letter-spacing: .5ch;
+}
+
+.ctest input[type="text"][gap-size="2"] {
+    width: 3ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.5ch)  
+	#ccc 0 100%/92% 2px no-repeat;
+	letter-spacing: .5ch;
+}
+
+.ctest input[type="text"][gap-size="3"] {
+    width: 4ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/92% 2px no-repeat;
+	letter-spacing: .35ch;
+}
+
+.ctest input[type="text"][gap-size="4"] {
+    width: 5.5ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/92% 2px no-repeat;
+	letter-spacing: .35ch;
+}
+
+.ctest input[type="text"][gap-size="5"] {
+    width: 7ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/92% 2px no-repeat;
+	letter-spacing: .35ch;
+}
+
+.ctest input[type="text"][gap-size="6"] {
+    width: 8.5ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/92% 2px no-repeat;
+	letter-spacing: .35ch;
+}
+
+.ctest input[type="text"][gap-size="7"] {
+    width: 10ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/92% 2px no-repeat;
+	letter-spacing: .35ch;
+}
+
+.ctest input[type="text"][gap-size="8"] {
+    width: 11.5ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/92% 2px no-repeat;
+	letter-spacing: .35ch;
+}
+
+.ctest input[type="text"][gap-size="9"] {
+    width: 13ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/92% 2px no-repeat;
+	letter-spacing: .4ch;
+}
+
+.ctest input[type="text"][gap-size="10"] {
+    width: 14.3ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/94% 2px no-repeat;
+	letter-spacing: .4ch;
+}
+
+.ctest input[type="text"][gap-size="11"] {
+    width: 16ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/94% 2px no-repeat;
+	letter-spacing: .4ch;
+}
+
+.ctest input[type="text"][gap-size="12"] {
+    width: 17ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/96% 2px no-repeat;
+	letter-spacing: .4ch;
+}
+
+.ctest input[type="text"][gap-size="13"] {
+    width: 18.2ch;
+	border: none;
+	padding: 1px 1px;
+	line-height: 120%;
+	font-size: 16px;
+	font-family: monospace;
+	background:#ccc url(gap.png) bottom left repeat-x;
+	background: 
+	repeating-linear-gradient(90deg, 
+        dimgrey 0, 
+        dimgrey 1ch, 
+        transparent 0, 
+        transparent 1.4ch)  
+	#ccc 0 100%/98% 2px no-repeat;
+	letter-spacing: .4ch;
+}
+
+input:focus {
+  outline: none;
+  color: dodgerblue;
+}
+}
+.ctest input[type="text"]:focus,
+.ctest input[type="text"]:hover {
+	background: #ffc;
+}
+.ctest textarea{
+	outline: none;
+	width: 100%;
+	height: 100%;
+	background-color: #fbfbfb;
+}
+
+input:focus {
+  outline: none;
+  color: dodgerblue;
+}
+}
+
+main .source {
+	color: #666;
+	font-size: 13px;
+}
+
+
+
+.ctest .wrong {
+	color: red;
+	/*text-decoration: line-through;*/
+	font-weight: bold;
+}
+.ctest .correction {
+	color: gray;
+	font-weight: bold;
+}
+.ctest .correct {
+	color: green;
+	font-weight: bold;
+}
+
+
+.results gap {
+ cursor: pointer; 
+}
+
+.tweet {
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 5px 5px;
+  padding: 0 16px 16px 16px;
+  max-width: 550px;
+  line-height: 1.5;
+}
+
+/*
+.results input[type=checkbox] {
+  background: blue url(thumbs.png) top left no-repeat;
+  padding: 10px;
+  padding: 20px;
+}
+*/
+.results input[type="radio"] {
+  display: none;
+}
+.results input[type="radio"] + label span {
+  display: inline-block;
+  width: 16px;
+  height: 19px;
+  margin: -2px 0px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+.results input[type="radio"].easy + label span {
+  background: url(thumbs.png) -16px 0px no-repeat;
+}
+.results input[type="radio"].hard + label span {
+  background: url(thumbs.png) -16px -19px no-repeat;
+}
+.results input[type="radio"].easy:checked + label span {
+  background: url(thumbs.png) -0px 0px no-repeat;
+}
+.results input[type="radio"].hard:checked + label span {
+  background: url(thumbs.png) 0px -19px no-repeat;
+}
+
+.results input[type="radio"]:checked + label span {
+  background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+}
+
+/*
+.results span.correction {
+  background-color: #FFCCCC;
+  }
+*/
+footer {
+  position: relative;
+	border-top: 1px solid #bbb;
+	padding: 1px 5px;
+	margin: 20px 0px 0px;
+}
+footer p {
+	font-size: 13px;
+	color: #999;
+}
+footer .masthead {
+  position: absolute;
+  right: 5px;
+  top: 1px;
+}
+footer a {
+  color: #999;
+}
+
+.slidecontainer {
+  width: 90%; /* Width of the outside container */
+  position: relative;
+  left: 5%;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 80%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+@media screen and (max-width: 700px) {
+
+.page {
+  margin: 10px 10px 10px;
+  max-width: auto;
+}
+header h2 {
+  font-size: 12px;
+}
+footer .masthead {
+  position: static;
+}
+
+}
+
+
+
+

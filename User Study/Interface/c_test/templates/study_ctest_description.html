@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h3>What are C-tests?</h3>
+  
+ <p>The C in C-test stands for its origin in the cloze test. Although the cloze test (a common gap exercise) is widely used, the setup contains several weaknesses such as the small number of gaps and the ambiguity of the solution. The C-test was developed as an alternative which addresses most of the weaknesses of the cloze test. In the following, you can see an example C-test (Note: this is only a mock-up for demonstration purposes). </p>
+  
+  <div class="ctest">
+  Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. 
+  It  <nobr>i<input class="ctest" type="text" autocomplete="off" name="76" id="76" size="1" maxlength="1"  gap-size="1" ></nobr> a <nobr>wa<input class="ctest" type="text" autocomplete="off" name="78" id="78" size="1" maxlength="1"  gap-size="1" ></nobr> I <nobr>ha<input class="ctest" type="text" autocomplete="off" name="80" id="80" size="2" maxlength="2"  gap-size="2" ></nobr> of <nobr>driv<input class="ctest" type="text" autocomplete="off" name="82" id="82" size="3" maxlength="3" gap-size="3" ></nobr> off <nobr>t<input class="ctest" type="text" autocomplete="off" name="84" id="84" size="2" maxlength="2"  gap-size="2" ></nobr> spleen <nobr>a<input class="ctest" type="text" autocomplete="off" name="87" id="87" size="2" maxlength="2" gap-size="2" ></nobr> regulating <nobr>t<input class="ctest" type="text" autocomplete="off" name="89" id="89" size="2" maxlength="2" gap-size="2" ></nobr> circulation. Whenever I <nobr>fi<input class="ctest" type="text" autocomplete="off" name="91" id="91" size="2" maxlength="2" gap-size="2" ></nobr> myself <nobr>gro<input class="ctest" type="text" autocomplete="off" name="93" id="93" size="4" maxlength="4" gap-size="4" ></nobr> grim <nobr>ab<input class="ctest" type="text" autocomplete="off" name="95" id="95" size="3" maxlength="3" gap-size="3" ></nobr> the <nobr>mou<input class="ctest" type="text" autocomplete="off" name="97" id="97" size="2" maxlength="2" gap-size="2" ></nobr>; whenever <nobr>i<input class="ctest" type="text" autocomplete="off" name="100" id="100" size="1" maxlength="1"  gap-size="1" ></nobr> is a <nobr>da<input class="ctest" type="text" autocomplete="off" name="102" id="102" size="2" maxlength="2" gap-size="2" ></nobr>, drizzly <nobr>Nove<input class="ctest" type="text" autocomplete="off" name="104" id="104" size="4" maxlength="4" gap-size="4" ></nobr> in <nobr>m<input class="ctest" type="text" autocomplete="off" name="106" id="106" size="1" maxlength="1"  gap-size="1" ></nobr>  soul; <nobr>when<input class="ctest" type="text" autocomplete="off" name="108" id="108" size="4" maxlength="4" gap-size="4" ></nobr> I <nobr>fi<input class="ctest" type="text" autocomplete="off" name="111" id="111" size="2" maxlength="2" gap-size="2" ></nobr> myself <nobr>involu<input class="ctest" type="text" autocomplete="off" name="113" id="113" size="7" maxlength="7" gap-size="7" ></nobr> pausing <nobr>bef<input class="ctest" type="text" autocomplete="off" name="115" id="115" size="3" maxlength="3" gap-size="3" ></nobr> coffin <nobr>wareh<input class="ctest" type="text" autocomplete="off" name="119" id="119" size="5" maxlength="5" gap-size="5" ></nobr>, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and
+methodically knocking people’s hats off—then, I account it high time to get to sea as soon as I can. 
+</div>
+  
+  <p>Usually, the generation strategy of C-Tests is fix. However, this results in a low variablility of C-Tests. In this study, our goal is to evaluate various new strategies for C-Test generation. During participation, you will be tasked with solving various C-Tests of different difficulty. Do not worry if you are not able to solve many gaps, it will still result in helpful feedback for our study. After each C-Test we will further ask you to assess your performance: </p>
+  
+          <div class="ctest">
+          <p>What do you think about the overall difficulty of this exercise?</p>
+          <fieldset>
+            <input type="radio" id="tooeasy" name="difficulty" value="too easy"> <label for="tooeasy"> too easy</label>
+            <input type="radio" id="easy" name="difficulty" value="easy"> <label for="easy"> easy</label>
+            <input type="radio" id="ok" name="difficulty" value="OK"> <label for="ok"> OK</label> 
+            <input type="radio" id="hard" name="difficulty" value="hard"> <label for="hard"> hard</label>
+            <input type="radio" id="toohard" name="difficulty" value="too hard"> <label for="toohard"> too hard</label>
+          </fieldset>
+        <p>How well do you think you did on this C-Test?</p>
+ 
+        <div class="slidecontainer">
+         <span>0  </span> <input type="range" class="slider" id="points" name="point_assessment" value="0" step="1" min="0" max="20" oninput="pointsOutput.value = points.value"><span>  20</span> </br>
+        </div>
+                I think I scored <output id="pointsOutput">0</output> points. 
+        </div>
+        
+        </br>
+
+<p><a class="button" href="/study">Understood! Start Doing C-Tests!</a></p> 
+{% endblock %}
+

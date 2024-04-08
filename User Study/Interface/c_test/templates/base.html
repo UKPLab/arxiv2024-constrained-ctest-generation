@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>C-Test Study {% block title %}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block head%}
+{% endblock %}
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+<script>
+
+/* 
+======================
+    Timer function
+====================== 
+*/ 
+var firstTime;
+
+function startTime() {
+    if (firstTime == null){
+        firstTime = new Date();
+    }
+    var today = new Date();
+
+
+    var timeDiff = Math.round((today.getTime() - firstTime.getTime()) / 1000);
+
+    var s = checkTime(Math.round(timeDiff % 60));
+    timeDiff = Math.floor(timeDiff / 60);
+    var m =  checkTime(Math.round(timeDiff % 60));
+    timeDiff = Math.floor(timeDiff / 60);
+    var h = Math.floor(timeDiff % 24);
+
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+/* 
+======================
+  Hide/ display scripts for questionnaire
+====================== 
+*/ 
+
+function show_yes(divId, element){
+    document.getElementById(divId).style.display = element.value == "yes" ? 'block' : 'none';
+}
+
+
+function add_token_timestamp(ev){
+    var target = ev.target || ev.srcElement;
+    var current_time = document.getElementById('txt').innerHTML;
+    form = document.getElementById('c_test_result');
+    timestamp = document.createElement('input');
+    timestamp.type = 'hidden';
+    timestamp.name = target.id.concat('-timestamp:').concat(current_time);
+    var current_value = target.value;
+    timestamp.value = 'input:'.concat(current_value);
+    form.append(timestamp);
+}
+
+
+</script>
+
+</head>
+<body onload="startTime()">
+  <div class="page">
+    <header>
+      <h1>Evaluation Study of C-Test Generation</h1>
+    </header>
+
+{% include 'nav.html' %}
+
+{% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+{% endfor %}
+
+    <main>
+{% block content %}
+{% endblock %}
+    </main>
+
+    <footer>
+      <p>© 2023 <a href="" target="_blank">Link removed for submission</a></p>
+      <p class="masthead"><a href="" target="_blank">Masthead</a></p>
+    </footer>
+  </div>
+</body>
+
+</html>
+

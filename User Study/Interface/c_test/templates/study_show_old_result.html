@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4> Your score:  {{ data.correct }} of {{ data.num_gaps }} points </h4>
+	<div align="right" name="time_taken">Your time (h/m/s): {{data.time_taken}}</div>
+<form action="/stats" id=c_test_result method="POST" >
+    <div class="ctest results">
+	{{ data.html|safe }}
+    </div>
+	<p class="source" align="right">
+           <b>{{ data.source_title }} </b> by <b>{{ data.source_author }}</b>. Source: <a target="_blank" href={{ data.source_publisher }}>Project Gutenberg</a>
+
+        </p>
+</form>
+
+<div class="command">
+<button type="submit" form=c_test_result>Back to my Profile</button>
+</div>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} - C-Test{% endblock %}
+
+{% block content %}
+
+      <h3>C-Test</h3>
+
+      <p>In the following text, some of the word endings have been replaced by a gap. The number of underscores indicates the number of letters that are missing.</p>
+      <b>Please try to fill out as many gaps as possible.</b>
+	<div align="right" id="txt" name="time_taken"></div>
+      <form action="/score_c_test" id=c_test_result method="POST">
+	<input type="hidden" name="startingdate" value="{{ data.date }}">
+        <input name="c_test_id" type="hidden" value="{{ data.id }}">
+
+		<div class="ctest">
+	  {{ data.ctest_text|safe }}
+
+        </div>
+        <div class="command">
+          <button type="submit" name="ctest_submit">Submit solution</button>
+        </div>
+      </form>
+	
+{% endblock %}
+

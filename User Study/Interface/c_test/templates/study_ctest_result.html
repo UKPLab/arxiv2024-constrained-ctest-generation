@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} - Results{% endblock %}
+
+{% block content %}
+
+      <h3>Results</h3>
+
+      <p>Thank you for submitting the results. Please also let us know how you would rate this exercise and your performance.</p>
+      <form action="/send_feedback" id=c_test_result method="POST">
+        <input type="hidden" name="c_test_id" value={{ data.ctest_id }}>
+        <div class="questionnaire">
+        </br></br>
+          <p>What do you think about the overall difficulty of this exercise?</p>
+          <fieldset>
+            <input type="radio" id="tooeasy" name="difficulty" value="too easy" required> <label for="tooeasy"> too easy</label>
+            <input type="radio" id="easy" name="difficulty" value="easy"> <label for="easy"> easy</label>
+            <input type="radio" id="ok" name="difficulty" value="OK" > <label for="ok"> OK</label> 
+            <input type="radio" id="hard" name="difficulty" value="hard"> <label for="hard"> hard</label>
+            <input type="radio" id="toohard" name="difficulty" value="too hard"> <label for="toohard"> too hard</label>
+          </fieldset>
+        <p>How well do you think you did on this C-Test?</p>
+ 
+        
+        <div class="slidecontainer">
+         <span>0  </span> <input type="range" class="slider" id="points" name="point_assessment" value="0" step="1" min="0" max="20" oninput="pointsOutput.value = points.value"><span>  20</span> </br>
+        </div>
+        I think I scored <output id="pointsOutput">0</output> points. 
+        </div>
+        <div class="command">
+          <button type="submit" name="results_submit">Continue</button>
+        </div>
+      </form>
+
+{% endblock %}
+

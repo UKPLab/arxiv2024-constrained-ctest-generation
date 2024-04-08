@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %} - Questionnaire{% endblock %}
+
+{% block content %}
+      <h3>Language Proficiency</h3>
+      <p>
+	Before we start, we would like to ask you some questions to assess your language proficiency. Your proficiency is important to ensure comparability between different exercise generation approaches. 
+      </p>
+
+      <form action="/finish_questionnaire" method="POST">
+      <div class="questionnaire">
+	</br>
+       <div class="fields">  
+            <p>Please estimate your current language proficiency in English:</p>
+              <select name="cefr">
+                <option value="A1">Beginner (A1)</option>
+                <option value="A2">Elementary (A2)</option>
+                <option value="B1">Intermediate (B1)</option>
+                <option value="B2">Upper Intermediate (B2)</option>
+                <option value="C1">Advanced (C1)</option>
+                <option value="C2">Proficiency (C2)</option>
+              </select> 
+            </br></br>
+            Not sure which level you're at? Read our guidelines for CEFR proficiency <a target="_blank" href="/study_cefr_description">here</a>. 
+            </br></br>
+            I studied English for about <input name="years" type="number" value="0" min="0" max="100"> years.
+
+           <p>How often do you practice or speak English?</p>
+            <select name="frequency">
+                <option value="never">Never</option>
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+            </select>
+           </br></br>
+           
+             <p>What is your native language?</p>
+             <input name="native-tongue" placeholder="My native language is ...">
+                 
+           <p>Have you tried learning languages (other than English)?</p>
+            <select name="other-languages"onchange="show_yes('hidden_div', this)">>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+           </br></br>
+           
+           <div id="hidden_div">
+            Which ones? <input name="other-languages-responses" placeholder="I've also tried learning...">
+           </div>
+
+
+       </div>
+    </div>
+        <div class="command">
+          <input type="submit" name="questionnaire" value="Start Study">
+        </div>
+      </form>
+
+{% endblock %}
+

@@ -1,0 +1,9 @@
+numpy==1.23.5
+pandas==2.0.1
+tensorflow==2.12.0
+torch==2.0.1
+tqdm==4.65.0
+pyphen==0.14.0
+transformers==4.34.0
+spacy==3.7.1
+xgboost==2.0.0

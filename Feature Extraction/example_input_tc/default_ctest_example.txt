@@ -1,0 +1,116 @@
+The
+superb
+intellectual
+and
+spiritual
+vitality
+of
+William
+James
+was
+never
+more
+evident
+than
+in
+his
+letters
+.
+----
+Here
+was	1	w	0.5
+a
+man
+with	2	wi	0.5
+an
+enormous	3	enor	0.5
+gift
+for	4	f	0.5
+living
+as	5	a	0.5
+well
+as	6	a	0.5
+thinking
+.
+----
+To	7	T	0.5
+both
+persons	8	per	0.5
+and
+ideas	9	id	0.5
+he
+brought	10	bro	0.5
+the
+same	11	sa	0.5
+delighted
+interest	12	inte	0.5
+,
+the
+same	13	sa	0.5
+open-minded
+relish
+for	14	f	0.5
+what
+was	15	w	0.5
+unique
+in	16	i	0.5
+each
+,
+the	17	t	0.5
+same
+discriminating	18	discrim	0.5
+sensibility
+and	19	a	0.5
+quicksilver
+intelligence	20	intell	0.5
+,
+the
+same
+gallantry
+of
+judgment
+.
+----
+For
+this
+latest
+addition
+to
+the
+Great
+Letters
+Series
+,
+under
+the
+general
+editorship
+of
+Louis
+Kronenberger
+,
+Miss
+Hardwick
+has
+made
+a
+selection
+which
+admirably
+displays
+the
+variety
+of
+James's
+genius
+,
+not
+to
+mention
+the
+felicities
+of
+his
+style
+.
+----
