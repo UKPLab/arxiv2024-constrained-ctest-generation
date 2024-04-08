@@ -5,26 +5,23 @@ My Project does a lot of very interesting stuff, like this and that.
 Please use the following citation:
 
 ```
-@InProceedings{smith:20xx:CONFERENCE_TITLE,
-  author    = {Smith, John},
-  title     = {My Paper Title},
-  booktitle = {Proceedings of the 20XX Conference on XXXX},
-  month     = mmm,
-  year      = {20xx},
-  address   = {Gotham City, USA},
-  publisher = {Association for XXX},
-  pages     = {XXXX--XXXX},
-  url       = {http://xxxx.xxx}
+@InProceedings{Lee:2024:CTestArxiv,
+  author    = {Lee, Ji-Ung and Pfetsch, Marc and Gurevych, Iryna},
+  title     = {Constrained C-Test Generation via Mixed-Integer Programming},
+  booktitle = {arxiv},
+  month     = {April},
+  year      = {2024},
+  pages     = {1--32},
+  url       = {https://xxxx.xxx}
 }
 ```
 
 > **Abstract:** This work proposes a novel method to generate C-Tests; a deviated form of cloze tests (a gap filling exercise) where only the last part of a word is turned into a gap. In contrast to previous works that only consider varying the gap size or gap placement to achieve locally optimal solutions, we propose a mixed-integer programming (MIP) approach. This allows us to consider gap size and placement simultaneously, achieving globally optimal solutions and to directly integrate state-of-the-art models for gap difficulty prediction into the optimization problem. A user study with 40 participants across four C-Tests generation strategies (including GPT-4) shows that our approach (*MIP*) significantly outperforms two of the baseline strategies (based on gap placement and GPT-4); and performs on-par with the third (based on gap size). Our analysis shows that GPT-4 still struggles to fulfill explicit constraints during generation and that *MIP* produces C-Tests that correlate best with the perceived difficulty. We publish our code, model, and collected data consisting of 32 English C-Tests with 20 gaps each (3,200 in total) under an open source license.
 
 
-Contact person: Ji-Ung Lee, ji-ung.lee@tu-darmstadt.de
-
-https://www.ukp.tu-darmstadt.de/
-https://www.tu-darmstadt.de/
+* Contact person: Ji-Ung Lee, ji-ung.lee@tu-darmstadt.de
+* https://www.ukp.tu-darmstadt.de/
+* https://www.tu-darmstadt.de/
 
 Don't hesitate to send us an e-mail or report an issue, if something is broken (and it shouldn't be) or if you have further questions.
 
