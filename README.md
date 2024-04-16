@@ -62,7 +62,7 @@ Here, we only provide a brief overview and detailed instructions on installation
 
 ### Feature Extraction <a name="features"></a>
 
-[Feature Extraction](#features) contains our feature extraction pipeline, derived from [Beinborn (2016)](https://tuprints.ulb.tu-darmstadt.de/5647/) and [Lee et al. (2020)](https://aclanthology.org/2020.acl-main.390/) extracts 61 features for a given input text in several successive steps. The feature extraction pipeline proposed by Beinborn (2016) requires a working DKPro-Core environment that include some licensed resources. [Lee et al. (2019)](https://github.com/UKPLab/acl2019-ctest-difficulty-manipulation/tree/master/code#setting-up-the-resources) provide explicit instructions on setting up the DKPro-Core environment. 
+[Feature Extraction](https://github.com/UKPLab/arxiv2024-constrained-ctest-generation/tree/master/Feature%20Extraction) contains our feature extraction pipeline, derived from [Beinborn (2016)](https://tuprints.ulb.tu-darmstadt.de/5647/) and [Lee et al. (2020)](https://aclanthology.org/2020.acl-main.390/) extracts 61 features for a given input text in several successive steps. The feature extraction pipeline proposed by Beinborn (2016) requires a working DKPro-Core environment that include some licensed resources. [Lee et al. (2019)](https://github.com/UKPLab/acl2019-ctest-difficulty-manipulation/tree/master/code#setting-up-the-resources) provide explicit instructions on setting up the DKPro-Core environment. 
 
 For easier processing, we compiled the whole pipeline of Beinborn (2016) into two executable `.jar` files; one for sentence scoring (`sentence_scoring.jar`) and one for feature extraction (`feature_extraction.jar`). The `.jar` files can be found on [tu datalib](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/4205). The required file format for the pipelines are `tc files` used by [DKPro TC](https://dkpro.github.io/dkpro-tc/). This format is comparable to the [CoNLL-U Format](https://universaldependencies.org/format.html) with a single token per line and additional annotations added via tab separators. In addition, sentence endings are explicitly marked via `----` . 
 
@@ -93,7 +93,7 @@ Note, that the tmp-folder is only used for storing the intermediate outputs and 
 For the gap difficulty prediction models, we provide the code in two separate projects for MLM models and Feature-based models.
 
 #### Transformer <a name="mlm"></a>
-Implementation for using Bert-like models in a regression setup with masks. Major changes compared to a default MLM classification setup are: 
+[Implementation](https://github.com/UKPLab/arxiv2024-constrained-ctest-generation/tree/master/Gap%20Difficulty%20Model/Transformer) for using Bert-like models in a regression setup with masks. Major changes compared to a default MLM classification setup are: 
 
 * Added ignore_index (int -100) for MSE (`mse`) and L1 (`l1`) losses in pytorch.
 * Extended data collator to return padded float values (required for regression)
@@ -108,7 +108,7 @@ Two additional scripts have been added for training Bert-like models using the `
 
 #### Feature-based <a name="feature"></a>
 
-This folder provides code for training and testing the feature based models used in our work. We investigate following models:
+[This](https://github.com/UKPLab/arxiv2024-constrained-ctest-generation/tree/master/Gap%20Difficulty%20Model/Feature-based) folder provides code for training and testing the feature based models used in our work. We investigate following models:
 
 * XGBoost (XGB)
 * Multi-layer Perceptrons (MLP)
@@ -119,7 +119,7 @@ We tune 100 randomly generated configurations for the MLP found in `configs` gen
 
 ### C-Test Generation <a name="generation"></a>
 
-We provide code for three C-Test generation strategies, namely, our MIP-based approach (MIP), and the reimplemented baselines for SEL and SIZE using the XGB model (Reimplemented Baseline). We provide preprocessed data for running the variability experiments under `data/Variability Data`. To run the models, add a respective `data` folder containing the preprocessed data as well as a `model` folder with the trained model. Results will be output in a respective `results` folder.
+We provide code for three C-Test generation strategies, namely, our MIP-based approach ([MIP](https://github.com/UKPLab/arxiv2024-constrained-ctest-generation/tree/master/C-Test%20Generation/MIP)), and the reimplemented baselines for SEL and SIZE using the XGB model ([Reimplemented Baseline](https://github.com/UKPLab/arxiv2024-constrained-ctest-generation/tree/master/C-Test%20Generation/Reimplemented%20Baseline)). We provide preprocessed data for running the variability experiments under `data/Variability Data`. To run the models, add a respective `data` folder containing the preprocessed data as well as a `model` folder with the trained model. Results will be output in a respective `results` folder.
 
 To process the gap size features (MIP and SIZE generation strategies), we require following [spacy](https://spacy.io/) model:
 
@@ -127,7 +127,7 @@ To process the gap size features (MIP and SIZE generation strategies), we requir
 
 We need the [pyphen](https://pyphen.org/) package for hyphenation and the standard ubuntu dictionary for [American English](https://manpages.ubuntu.com/manpages/trusty/man5/american-english.5.html) to check for compound breaks (found in the `resources` folder).
 
-To run the SEL and SIZE baselines, please follow the instructions provided by [Lee et al. (2019)](https://github.com/UKPLab/acl2019-ctest-difficulty-manipulation).
+To run the SEL and SIZE baselines, please follow the instructions provided by [Lee et al. (2019)](https://github.com/UKPLab/acl2019-ctest-difficulty-manipulation). 
 
 #### MIP <a name="mip"></a>
 
@@ -143,13 +143,15 @@ With `--tau` being the target difficulty (a value between [0, 1]) and `--update-
 
 For debugging the MIP model, the option `--debug-mip` should be set to `True` and a path for the logging file provided via `--debug-log`.
 
+Finally, we provide additional implementations of the optimization objective using indicator functions and piecewise linear approximations. You can find the implementations in [MIP Objective Functions](https://github.com/UKPLab/arxiv2024-constrained-ctest-generation/tree/master/C-Test%20Generation/MIP_Objective_Functions). They can be run using the same setup as the default one. 
+
 #### Reimplemented Baseline <a name="reimplbaselines"></a>
 
 We implement both baselines SEL and SIZE proposed by [Lee et al. (2019)](https://aclanthology.org/P19-1035/) using the trained XGB model. Runscripts for the variability experiments to assess the performance against the original implementations are provided in the shell scripts. The data to run these experiments is provided at [tu datalib](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/4205) `Variability Data.zip`. To run the models, add a respective `data` folder containing the preprocessed data as well as a `model` folder with the trained model. Results will be output in a respective `results` folder.
 
 ### User Study <a name="study"></a>
 
-Code regarding the user study consists of three parts. First, the interface we implement and use written in Flask using SQLAlchemy as a backend for our (MySQL) database. Second, the Latin Hypercube Sampling implemented as a constratined optimization problem, and third, the R scripts implementing the GAMM we use for our analysis.
+Code regarding the user study consists of three parts. First, the [interface](https://github.com/UKPLab/arxiv2024-constrained-ctest-generation/tree/master/User%20Study/Interface) we implement and use written in Flask using SQLAlchemy as a backend for our (MySQL) database. Second, the [Latin Hypercube Sampling](https://github.com/UKPLab/arxiv2024-constrained-ctest-generation/tree/master/User%20Study/Sampling) implemented as a constratined optimization problem, and third, the R scripts implementing the GAMM we use for our [analysis](https://github.com/UKPLab/arxiv2024-constrained-ctest-generation/tree/master/User%20Study/Analysis).
 
 #### Interface <a name="interface"></a>
 
