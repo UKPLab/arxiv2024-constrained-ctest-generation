@@ -42,6 +42,8 @@ After installing the respective python package ```pip install xgboost``` , you c
     xgb_model.load_model(path_to_model)
     xgb_model.predict(xgboost.DMatrix(features_vector.reshape(1, -1))) # Prediction for a single instance
 
+The [tu datalib](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/4205) repository also contains fine-tuned checkpoints of the best performing model (MLP, BERT-base/large, RoBERTa-base/large, DeBERTa-base/large) for gap difficulty prediction. We provide three variants of the transformer-based models: masked regression (MR), CLS-token prediction (CLS), and CLS-token + feature-vector prediction (CLS-F). 
+
 ## Project structure
 
 This project is structured as follows:
