@@ -6,7 +6,7 @@ This repository includes the code for generating C-Tests with Mixed-Integer Prog
 
 ## General information
 
-* Contact person: Ji-Ung Lee, ji-ung.lee@tu-darmstadt.de
+* Contact person: Ji-Ung Lee, ji-ung.lee@uni-saarland.de
 * https://www.ukp.tu-darmstadt.de/
 * https://www.tu-darmstadt.de/
 
